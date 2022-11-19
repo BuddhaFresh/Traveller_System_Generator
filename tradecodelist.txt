@@ -1,0 +1,139 @@
+tcodes = {
+"Ag": "Agricultural",
+"As": "Asteroid",
+"Ba": "Barren",
+"De": "Desert",
+"Fl": "Fluid Oceans",
+"Ga": "Garden",
+"Hi": "High Population",
+"Ht": "High Tech",
+"Ie": "Ice-Capped",
+"In": "Industrial",
+"Lo": "Low Population",
+"Lt": "Low Tech",
+"Na": "Non-Agricultural",
+"NI": "Non-Industrial",
+"Po": "Poor",
+"Ri": "Rich",
+"Va": "Vacuum",
+"Wa": "Water World"
+}
+
+#this is an unused dictionary, which doesn't seem the best use case for this.
+#I can use the text later.
+
+#trade code names in list
+tcnamesREAL = ["Agricultural","Asteroid","Barren","Desert","Fluid Oceans","Garden","High Population","High Tech","Ice-Capped","Industrial","Low Population","Low Tech","Non-Agricultural","Non-Industrial","Poor","Rich","Vacuum","Water World"]
+
+#for stylized text in beginning. Need to figure out compounding method.
+tcnamesSTYLE = ["Agricultural","Asteroid","Barren","Desert","Fluid Oceans","Garden","High Population","High Tech","Ice-Capped","Industrial","Low Population","Low Tech","Non-Agricultural","Non-Industrial","Poor","Rich","Vacuum","Water World"] 
+
+tch = ["Ag,"As","Ba","De","Fl","Ga","Hi","Ht","Ie","In","Lo","Lt","Na","NI","Po","Ri","Va","Wa"]
+#list of hexcode 
+
+tcodes = {
+0 : ["Ag", "Agricultural"],
+1 : ["As", "Asteroid"],
+2 : ["Ba", "Barren"],
+3 : ["De", "Desert"],
+4 : ["Fl", "Fluid Oceans"],
+5 : ["Ga", "Garden"],
+6 : ["Hi", "High Population"],
+7 : ["Ht", "High Tech"],
+8 : ["Ie", "Ice-Capped"],
+9 : ["In", "Industrial"],
+10 : ["Lo", "Low Population"],
+11 : ["Lt", "Low Tech"],
+12 : ["Na", "Non-Agricultural"],
+13 : ["NI", "Non-Industrial"],
+14 : ["Po", "Poor"],
+15 : ["Ri", "Rich"],
+16 : ["Va", "Vacuum"],
+17 : ["Wa", "Water World"]
+}
+#dictionary with exspandable lists 
+
+sizeinfo = {
+0: ["Less than 1000 km","Asteroid, orbital complex","Negligible"],
+1: ["1,600 km","Triton","0.05"],
+2: ["3,200 km","Luna, Europa","0.15"],
+3: ["4,800 km","Mercury, Ganymede","0.25"],
+4: ["6,400 km","","0.35"],
+5: ["8,000 km","Mars","0.45"],
+6: ["9,600 km","","0.7"],
+7: ["11,200 km","","0.9"],
+8: ["12,800 km","Earth","1.0"],
+9: ["14,400 km","","1.25"],
+10: ["16,000 km","","1.4"]
+}
+
+#raw Sheet code for Atmosphere "Composition"
+=IFS(
+C3=0,"Just vacuum. Vacc Suit required. Cumulative 1D DAM every round without a suit. 2D x 10 Rads every round if in space unprotected.",
+C3=1,"Trace amounts of gases in the atmosphere. Vacc Suit required. 1D DAM every round without a suit.",
+C3=2,"An atmosphere too thin the breath in containing harmful elements. Respirator and Filter required. 1D Dam every few minutes or hours if breathing tainted air. 1D DAM every minute without a Respirator.",
+C3=3,"An atmosphere too thin the breath in. Respirator required. 1D DAM every minute without a Respirator.",
+C3=4,"A thin, but breathable, atmosphere containing harmful elements. Filter required. 1D DAM every few minutes or hours if breathing tainted air.",
+C3=5,"A thin, but breathable, atmosphere.",
+C3=6,"A breathable atmosphere.",
+C3=7,"A breathable atmosphere containing harmful elements. Filter required. 1D DAM every few minutes or hours if breathing tainted air.",
+C3=8,"A thick N₂/O₂ atmosphere with a surface pressure too high to live in unprotected unless at higher altitudes.",
+C3=9,"A thick N₂/O₂ atmosphere, containing harmful elements, with a surface pressure too high to live in unprotected unless at higher altitudes. Filter required. 1D DAM every few minutes or hours if breathing tainted air.",
+OR(C3=10,C3="A"),"An exotic atmosphere which is unbreathable but otherwise not hazardous. Air Supply required. 1D DAM every minute without an Air Supply.",
+OR(C3=11,C3="B"),"A highly dangerous corrosive atmosphere. Vacc Suit required. 1D DAM each round breathing corrosive air.",
+OR(C3=12,C3="C"),"An atmosphere so corrosive it will distroy seals, filters, and gear after 2D hours on average. Vigilant maintenance or advanced protection gear can prolong survival time. Vacc Suit required. 1D DAM each round breathing corrosive air.",
+OR(C3=13,C3="D"),"A thick N₂/O₂ atmosphere with a surface pressure too high to live in unprotected unless at higher altitudes.",
+OR(C3=14,C3="E"),"A N₂/O₂ atmosphere so thin it is only present in lowland topographic and the highest points may be close to vacuum. Vacc Suit may be required. 1D DAM every round without a suit at high enough points.",
+OR(C3>=15,C3="F"),"A stange and unique atmosphere that may behave in unusual manners."
+)
+
+#Atmosphere info
+=IFS(
+C3=0,"None. Like Luna. Minimum Tech Level required: 8",
+C3=1,"Trace. Like Mars. Minimum Tech Level required: 8",
+C3=2,"Very Thin and Tainted. Minimum Tech Level required: 5",
+C3=3,"Very Thin. Minimum Tech Level required: 5",
+C3=4,"Thin and Tainted. Minimum Tech Level required: 3",
+C3=5,"Thin.",
+C3=6,"Standard. Like Earth.",
+C3=7,"Standard and Tainted. Minimum Tech Level required: 3",
+C3=8,"Dense.",
+C3=9,"Dense and Tainted. Minimum Tech Level required: 3",
+OR(C3=10,C3="A"),"Exotic. Minimum Tech Level required: 8",
+OR(C3=11,C3="B"),"Corrosive. Like Venus. Minimum Tech Level required: 9",
+OR(C3=12,C3="C"),"Insidious. Minimum Tech Level required: 10(A)",
+OR(C3=13,C3="D"),"Very Dense. Minimum Tech Level required: 5",
+OR(C3=14,C3="E"),"Low. Minimum Tech Level required: 5",
+OR(C3>=15,C3="F"),"Unusual. Minimum Tech Level required: 8")
+
+#population details
+=IFS(
+E3<=0,"None.",
+E3=1,"Few. A tiny farmstead or a single family.",
+E3=2,"Hundreds. A village.",
+E3=3,"Thousands.",
+E3=4,"Tens of Thousands. Small town.",
+E3=5,"Hundreds of thousands. Average city.",
+E3=6,"Millions",
+E3=7,"Tens of millions. Large city.",
+E3=8,"Hundreds of millions.",
+E3=9,"Billions. Present day Earth.",
+OR(E3=10,E3="A"),"Tens of billions",
+OR(E3=11,E3="B"),"Hundreds of billions. Incredibly crowded world.",
+OR(E3>=12,E3="C"),"Trillions. World-city.")
+
+#population numbers
+=IFS(
+E3<=0,"0",
+E3=1,"1+",
+E3=2,"100+",
+E3=3,"1,000+",
+E3=4,"10,000+",
+E3=5,"100,000+",
+E3=6,"1,000,000+",
+E3=7,"10,000,000+",
+E3=8,"100,000,000+",
+E3=9,"1,000,000,000+",
+OR(E3=10,E3="A"),"10,000,000,000+",
+OR(E3=11,E3="B"),"100,000,000,000+",
+OR(E3>=12,E3="C"),"1,000,000,000,000+")

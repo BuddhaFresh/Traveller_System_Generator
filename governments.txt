@@ -1,0 +1,64 @@
+None
+Company/Corporation
+Participating Democracy
+Self-Perpetuating Oligarchy
+Representative Democracy
+Feudal Technocracy
+Captive Government
+Balkanisation
+Civil Service Bureaucracy
+Impersonal Bureaucracy
+Charismatic Dictator
+Non-Charismatic Leader
+Charismatic Oligarchy
+Religious Dictatorship
+Religious Autocracy
+Totalitarian Oligarchy
+No government structure. In many cases, family bonds predominate.
+Ruling functions are assumed by a company managerial elite, and most itizenry are company employees or dependants.
+Ruling functions are reached by the advice and consent of the citizenry directly.
+Ruling functions are performed by a restricted minority, with little or no input from the mass of citizenry.
+Ruling functions are performed by elected representatives.
+Ruling functions are performed by specific individuals for persons who agree to be ruled by them. Relationships are based on the performance of technical activities which are mutually beneicial.
+Ruling functions are performed by an imposed leadership answerable to an outside group.
+No central authority exists; rival governments complete for control. Law level refers to the government nearest the starport.
+Ruling functions are performed by government agencies employing individuals selected for their expertise.
+Ruling functions are performed by agencies which have become insulated from the governed citizens.
+Ruling functions are performed by agencies directed by a single leader who enjoys the overwhelming conidence of the citizens.
+A previous charismatic dictator has been replaced by a leader through normal channels.
+Ruling functions are performed by a select group of members of an organisation or class which enjoys the overwhelming conidence of the citizenry.
+Ruling functions are performed by a religious organisation without regard to the speciic individual needs of the citizenry.
+Government by a single religious leader having absolute power over the citizenry.
+Government by an all-powerful minority which maintains absolute control through widespread coercion and oppresion.
+Family, Clan, Anarchy
+Corporate outpost, asteroid mine, feudal domain
+Collective, tribal council, commlinked consensus
+Plutocracy, hereditary ruling caste
+Republic, democracy
+Those with access to higher technology tend to have higher social status
+A colony or conquered area
+Multiple governments, civil war
+Technocracy, Communism
+Entrenched castes of bureaucrats, decaying empire
+Revolutionary leader, messiah, emperor
+Military dictatorship, hereditary kingship
+Junta, revolutionary council
+Cult, transcendent philosophy, psionic group mind
+Messiah
+World church, Ruthless corporation
+None
+Weapons, Drugs, Travellers
+Drugs
+Technology, Weapons, Travellers
+Drugs, Weapons, Psionics
+Technology, Weapons, Computers
+Weapons, Technology, Travellers
+Varies
+Drugs, Weapons
+Technology, Weapons, Drugs, Travellers, Psionics
+None
+Weapons, Technology, Computers
+Weapons
+Varies
+Varies
+Varies
